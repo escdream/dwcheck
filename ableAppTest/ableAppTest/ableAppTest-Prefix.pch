@@ -1,0 +1,68 @@
+//
+//  DWCheck.pch
+//  ableAppTest
+//
+//  Created by JoonHo Kang on 11/09/2019.
+//  Copyright © 2019 JoonHo Kang. All rights reserved.
+//
+
+//
+// Prefix header for all source files
+//
+
+#ifdef DEBUG
+#define LOGUSE
+#endif
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
+
+static void workLog(NSString *format, ...)
+{
+#ifdef LOGUSE
+    va_list argumentList;
+    va_start(argumentList, format);
+    
+    NSMutableString * message = [[NSMutableString alloc] initWithFormat:format arguments:argumentList];
+    [message insertString:@"[DW] " atIndex:0];
+    
+    NSLogv(message, argumentList); // Originally NSLog is a wrapper around NSLogv.
+    va_end(argumentList);
+#endif
+}
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) workLog(__VA_ARGS__)
+#define ESLog(...) workLog(__VA_ARGS__)
+#else
+#define NSLog(...) {}
+#define ESLog(...) {}
+#endif
+
+#define NSLogEx(format, ...) CFShow([NSString stringWithFormat:format, ## __VA_ARGS__])
+
+#endif
+
+#define TEST_WORK
+#define TEST_WORK2
+#define TEST_WORK3
+#define TEST_4
+#define TEST_5
+#define TEST_6
+
+
+#define TEST_VERSION
+
+#ifdef TEST_VERSION
+#endif
+
+
+#ifdef _DISTRIBUTION
+
+#else
+
+#endif
+
