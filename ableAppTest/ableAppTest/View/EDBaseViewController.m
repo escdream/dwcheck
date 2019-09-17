@@ -105,8 +105,8 @@
         UIButton * mainMenu = [UIButton buttonWithType:UIButtonTypeCustom];
         mainMenu.frame = CGRectMake(10, 0, 60, 40);
         mainMenu.imageEdgeInsets = UIEdgeInsetsMake(7.5, 40, 7.5, 00);
-        UIImage *backButtonImage = [UIImage imageNamed:@"util_icon_login.png"];
-        UIImage *backButtonImage_B = [UIImage imageNamed:@"util_icon_login_b.png"];
+        UIImage *backButtonImage = [UIImage imageNamed:@"util_open_menu.png"];
+        UIImage *backButtonImage_B = [UIImage imageNamed:@"util_open_menu.png"];
         [mainMenu setImage:backButtonImage forState:UIControlStateNormal];
         [mainMenu setImage:backButtonImage_B forState:UIControlStateSelected];
 
@@ -162,18 +162,17 @@
     [self adjustSizeLayout];
 
     
-    mainMenu = [UIButton buttonWithType:UIButtonTypeCustom];
-    mainMenu.frame = CGRectMake(0, 0, 35, 35);
-//    mainMenu.imageEdgeInsets = UIEdgeInsetsMake(7.5, 0, 7.5, 40);
-    UIImage *backButtonImage = [UIImage imageNamed:@"util_open_menu.png"];
-    [mainMenu setImage:backButtonImage forState:UIControlStateNormal];
+//    mainMenu = [UIButton buttonWithType:UIButtonTypeCustom];
+//    mainMenu.frame = CGRectMake(0, 0, 35, 35);
+////    mainMenu.imageEdgeInsets = UIEdgeInsetsMake(7.5, 0, 7.5, 40);
+//    UIImage *backButtonImage = [UIImage imageNamed:@"util_open_menu.png"];
+//    [mainMenu setImage:backButtonImage forState:UIControlStateNormal];
+//
+//    [mainMenu addTarget:self action:@selector(showLeftView) forControlEvents:UIControlEventTouchUpInside];//
     
-    [mainMenu addTarget:self action:@selector(showLeftView) forControlEvents:UIControlEventTouchUpInside];//
-    
-
     
     goBack = [UIButton buttonWithType:UIButtonTypeCustom];
-    goBack.frame = CGRectMake(40, 0, 35, 35);
+    goBack.frame = CGRectMake(0, 0, 35, 35);
 //    goBack.imageEdgeInsets = UIEdgeInsetsMake(7.5, 0, 7.5, 40);
     UIImage *backImage = [UIImage imageNamed:@"ico_tit_back_n.png"];
     [goBack setImage:backImage forState:UIControlStateNormal];
@@ -184,7 +183,7 @@
     UIView * viewLeft = [[UIView alloc] init];
     viewLeft.frame = CGRectMake(0, 0, 80, 40);
     
-    [viewLeft addSubview:mainMenu];
+//    [viewLeft addSubview:mainMenu];
     [viewLeft addSubview:goBack];
 
     

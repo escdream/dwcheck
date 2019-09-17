@@ -11,8 +11,18 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BuildingController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *tblBuild;
 
 @property (nonatomic, assign) BOOL visible;
+@property (nonatomic, strong) NSMutableArray * arrDongInfo;
+
+@property (nonatomic, strong) NSString * str_disp_mode;
+@property (nonatomic, strong) NSString * strDong;
+
+
+- (void) buildData;
+- (void) refreshData;
+
 @end
 
 NS_ASSUME_NONNULL_END

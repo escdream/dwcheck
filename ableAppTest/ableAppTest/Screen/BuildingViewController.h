@@ -12,7 +12,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BuildingViewController : EDBaseViewController
-
+@property (weak, nonatomic) IBOutlet UIView *viewBottom;
+@property (weak, nonatomic) IBOutlet UIView *viewWork;
+@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
+@property (strong, nonatomic) IBOutlet UIView *viewPicker;
+@property (weak, nonatomic) IBOutlet UIView *viewDongSel;
+@property (nonatomic, strong) NSString * str_disp_mode;
 @end
 
 NS_ASSUME_NONNULL_END

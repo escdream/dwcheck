@@ -124,6 +124,24 @@
 		B6D0EA262328F500008C18C9 /* imageRoot.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA232328F500008C18C9 /* imageRoot.png */; };
 		B6D0EA2A2328F82A008C18C9 /* BuildingController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA282328F82A008C18C9 /* BuildingController.m */; };
 		B6D0EA2B2328F82A008C18C9 /* BuildingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA292328F82A008C18C9 /* BuildingController.xib */; };
+		B6D0EA31232EFEBE008C18C9 /* util_open_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA2D232EFEBD008C18C9 /* util_open_menu.png */; };
+		B6D0EA32232EFEBE008C18C9 /* ico_tit_back_n.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA2E232EFEBE008C18C9 /* ico_tit_back_n.png */; };
+		B6D0EA33232EFEBE008C18C9 /* ico_tit_back_o.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA2F232EFEBE008C18C9 /* ico_tit_back_o.png */; };
+		B6D0EA34232EFEBE008C18C9 /* util_open_menu_b.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA30232EFEBE008C18C9 /* util_open_menu_b.png */; };
+		B6D0EA38232EFF6E008C18C9 /* util_icon_login.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA35232EFF6E008C18C9 /* util_icon_login.png */; };
+		B6D0EA39232EFF6E008C18C9 /* util_d_icon_login.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA36232EFF6E008C18C9 /* util_d_icon_login.png */; };
+		B6D0EA3A232EFF6E008C18C9 /* util_icon_login_b.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA37232EFF6E008C18C9 /* util_icon_login_b.png */; };
+		B6D0EA3C232F0440008C18C9 /* main in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA3B232F043F008C18C9 /* main */; };
+		B6D0EA4C232F4DBF008C18C9 /* ManaDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA3E232F4DBF008C18C9 /* ManaDropDownMenu.m */; };
+		B6D0EA4D232F4DBF008C18C9 /* SyuDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA3F232F4DBF008C18C9 /* SyuDropDownMenu.m */; };
+		B6D0EA4E232F4DBF008C18C9 /* CCDropDownMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA42232F4DBF008C18C9 /* CCDropDownMenuCell.m */; };
+		B6D0EA4F232F4DBF008C18C9 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B6D0EA43232F4DBF008C18C9 /* arrow.png */; };
+		B6D0EA50232F4DBF008C18C9 /* GaiDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA47232F4DBF008C18C9 /* GaiDropDownMenu.m */; };
+		B6D0EA51232F4DBF008C18C9 /* CCDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA4A232F4DBF008C18C9 /* CCDropDownMenu.m */; };
+		B6D0EA58232F50FB008C18C9 /* IGLDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA54232F50FB008C18C9 /* IGLDropDownMenu.m */; };
+		B6D0EA59232F50FB008C18C9 /* IGLDropDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA57232F50FB008C18C9 /* IGLDropDownItem.m */; };
+		B6D0EA5C232F5E4E008C18C9 /* FhcComboBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA5A232F5E4E008C18C9 /* FhcComboBoxView.m */; };
+		B6D0EA5F232F5FB3008C18C9 /* KPDropMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D0EA5E232F5FB3008C18C9 /* KPDropMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -374,6 +392,35 @@
 		B6D0EA272328F82A008C18C9 /* BuildingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BuildingController.h; sourceTree = "<group>"; };
 		B6D0EA282328F82A008C18C9 /* BuildingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BuildingController.m; sourceTree = "<group>"; };
 		B6D0EA292328F82A008C18C9 /* BuildingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuildingController.xib; sourceTree = "<group>"; };
+		B6D0EA2D232EFEBD008C18C9 /* util_open_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = util_open_menu.png; sourceTree = "<group>"; };
+		B6D0EA2E232EFEBE008C18C9 /* ico_tit_back_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_tit_back_n.png; sourceTree = "<group>"; };
+		B6D0EA2F232EFEBE008C18C9 /* ico_tit_back_o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_tit_back_o.png; sourceTree = "<group>"; };
+		B6D0EA30232EFEBE008C18C9 /* util_open_menu_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = util_open_menu_b.png; sourceTree = "<group>"; };
+		B6D0EA35232EFF6E008C18C9 /* util_icon_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = util_icon_login.png; sourceTree = "<group>"; };
+		B6D0EA36232EFF6E008C18C9 /* util_d_icon_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = util_d_icon_login.png; sourceTree = "<group>"; };
+		B6D0EA37232EFF6E008C18C9 /* util_icon_login_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = util_icon_login_b.png; sourceTree = "<group>"; };
+		B6D0EA3B232F043F008C18C9 /* main */ = {isa = PBXFileReference; lastKnownFileType = folder; path = main; sourceTree = "<group>"; };
+		B6D0EA3E232F4DBF008C18C9 /* ManaDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManaDropDownMenu.m; sourceTree = "<group>"; };
+		B6D0EA3F232F4DBF008C18C9 /* SyuDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyuDropDownMenu.m; sourceTree = "<group>"; };
+		B6D0EA40232F4DBF008C18C9 /* GaiDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaiDropDownMenu.h; sourceTree = "<group>"; };
+		B6D0EA41232F4DBF008C18C9 /* CCDropDownMenus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropDownMenus.h; sourceTree = "<group>"; };
+		B6D0EA42232F4DBF008C18C9 /* CCDropDownMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDropDownMenuCell.m; sourceTree = "<group>"; };
+		B6D0EA43232F4DBF008C18C9 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		B6D0EA44232F4DBF008C18C9 /* CCDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropDownMenu.h; sourceTree = "<group>"; };
+		B6D0EA45232F4DBF008C18C9 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		B6D0EA46232F4DBF008C18C9 /* ManaDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManaDropDownMenu.h; sourceTree = "<group>"; };
+		B6D0EA47232F4DBF008C18C9 /* GaiDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaiDropDownMenu.m; sourceTree = "<group>"; };
+		B6D0EA48232F4DBF008C18C9 /* SyuDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyuDropDownMenu.h; sourceTree = "<group>"; };
+		B6D0EA49232F4DBF008C18C9 /* CCDropDownMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropDownMenuCell.h; sourceTree = "<group>"; };
+		B6D0EA4A232F4DBF008C18C9 /* CCDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDropDownMenu.m; sourceTree = "<group>"; };
+		B6D0EA54232F50FB008C18C9 /* IGLDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenu.m; sourceTree = "<group>"; };
+		B6D0EA55232F50FB008C18C9 /* IGLDropDownItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownItem.h; sourceTree = "<group>"; };
+		B6D0EA56232F50FB008C18C9 /* IGLDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownMenu.h; sourceTree = "<group>"; };
+		B6D0EA57232F50FB008C18C9 /* IGLDropDownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownItem.m; sourceTree = "<group>"; };
+		B6D0EA5A232F5E4E008C18C9 /* FhcComboBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FhcComboBoxView.m; sourceTree = "<group>"; };
+		B6D0EA5B232F5E4E008C18C9 /* FhcComboBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FhcComboBoxView.h; sourceTree = "<group>"; };
+		B6D0EA5D232F5FB3008C18C9 /* KPDropMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPDropMenu.h; sourceTree = "<group>"; };
+		B6D0EA5E232F5FB3008C18C9 /* KPDropMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPDropMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +474,8 @@
 		B6A9EB8623287F410086EEF7 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0EA53232F50FB008C18C9 /* IGLDropDownMenu */,
+				B6D0EA3D232F4DBF008C18C9 /* CCDropDownMenu */,
 				B6D0E9742328DB4B008C18C9 /* libAMSLibrary.a */,
 				B6D0E9722328DB26008C18C9 /* JGProgressHUD.framework */,
 				B6A9EB8723287F410086EEF7 /* AFNetworking_1_x */,
@@ -574,6 +623,10 @@
 		B6A9EBDC23287F410086EEF7 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0EA5D232F5FB3008C18C9 /* KPDropMenu.h */,
+				B6D0EA5E232F5FB3008C18C9 /* KPDropMenu.m */,
+				B6D0EA5B232F5E4E008C18C9 /* FhcComboBoxView.h */,
+				B6D0EA5A232F5E4E008C18C9 /* FhcComboBoxView.m */,
 				B6A9EBDD23287F410086EEF7 /* BFPaperTabBarController.m */,
 				B6A9EBDE23287F410086EEF7 /* EDSpectrumView.h */,
 				B6A9EBDF23287F410086EEF7 /* EDRoundView.h */,
@@ -771,6 +824,7 @@
 		B6D0EA1F2328F500008C18C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0EA3B232F043F008C18C9 /* main */,
 				B6D0EA202328F500008C18C9 /* Image */,
 			);
 			path = Resource;
@@ -779,11 +833,49 @@
 		B6D0EA202328F500008C18C9 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				B6D0EA36232EFF6E008C18C9 /* util_d_icon_login.png */,
+				B6D0EA37232EFF6E008C18C9 /* util_icon_login_b.png */,
+				B6D0EA35232EFF6E008C18C9 /* util_icon_login.png */,
+				B6D0EA2E232EFEBE008C18C9 /* ico_tit_back_n.png */,
+				B6D0EA2F232EFEBE008C18C9 /* ico_tit_back_o.png */,
+				B6D0EA30232EFEBE008C18C9 /* util_open_menu_b.png */,
+				B6D0EA2D232EFEBD008C18C9 /* util_open_menu.png */,
 				B6D0EA212328F500008C18C9 /* imageRight.png */,
 				B6D0EA222328F500008C18C9 /* imageLeft.png */,
 				B6D0EA232328F500008C18C9 /* imageRoot.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		B6D0EA3D232F4DBF008C18C9 /* CCDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0EA3E232F4DBF008C18C9 /* ManaDropDownMenu.m */,
+				B6D0EA3F232F4DBF008C18C9 /* SyuDropDownMenu.m */,
+				B6D0EA40232F4DBF008C18C9 /* GaiDropDownMenu.h */,
+				B6D0EA41232F4DBF008C18C9 /* CCDropDownMenus.h */,
+				B6D0EA42232F4DBF008C18C9 /* CCDropDownMenuCell.m */,
+				B6D0EA43232F4DBF008C18C9 /* arrow.png */,
+				B6D0EA44232F4DBF008C18C9 /* CCDropDownMenu.h */,
+				B6D0EA45232F4DBF008C18C9 /* Rect.h */,
+				B6D0EA46232F4DBF008C18C9 /* ManaDropDownMenu.h */,
+				B6D0EA47232F4DBF008C18C9 /* GaiDropDownMenu.m */,
+				B6D0EA48232F4DBF008C18C9 /* SyuDropDownMenu.h */,
+				B6D0EA49232F4DBF008C18C9 /* CCDropDownMenuCell.h */,
+				B6D0EA4A232F4DBF008C18C9 /* CCDropDownMenu.m */,
+			);
+			path = CCDropDownMenu;
+			sourceTree = "<group>";
+		};
+		B6D0EA53232F50FB008C18C9 /* IGLDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B6D0EA54232F50FB008C18C9 /* IGLDropDownMenu.m */,
+				B6D0EA55232F50FB008C18C9 /* IGLDropDownItem.h */,
+				B6D0EA56232F50FB008C18C9 /* IGLDropDownMenu.h */,
+				B6D0EA57232F50FB008C18C9 /* IGLDropDownItem.m */,
+			);
+			path = IGLDropDownMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,16 +937,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D0EA1E2328F25C008C18C9 /* BuildingViewController.xib in Resources */,
+				B6D0EA33232EFEBE008C18C9 /* ico_tit_back_o.png in Resources */,
 				B6D0EA2B2328F82A008C18C9 /* BuildingController.xib in Resources */,
+				B6D0EA39232EFF6E008C18C9 /* util_d_icon_login.png in Resources */,
 				B6D0EA072328ECCF008C18C9 /* LoginViewController.xib in Resources */,
+				B6D0EA3C232F0440008C18C9 /* main in Resources */,
 				B6D0EA142328ED98008C18C9 /* StartupPopupView.xib in Resources */,
+				B6D0EA31232EFEBE008C18C9 /* util_open_menu.png in Resources */,
 				B6D0EA262328F500008C18C9 /* imageRoot.png in Resources */,
 				B6A9EB7D23287DEF0086EEF7 /* LaunchScreen.storyboard in Resources */,
 				B6D0E9FF2328EC66008C18C9 /* MainScreenViewController.xib in Resources */,
 				B6D0EA242328F500008C18C9 /* imageRight.png in Resources */,
+				B6D0EA3A232EFF6E008C18C9 /* util_icon_login_b.png in Resources */,
+				B6D0EA38232EFF6E008C18C9 /* util_icon_login.png in Resources */,
 				B6A9EB7A23287DEF0086EEF7 /* Assets.xcassets in Resources */,
+				B6D0EA34232EFEBE008C18C9 /* util_open_menu_b.png in Resources */,
 				B6D0EA182328EF2D008C18C9 /* MainHomeViewController.xib in Resources */,
+				B6D0EA32232EFEBE008C18C9 /* ico_tit_back_n.png in Resources */,
 				B6D0EA252328F500008C18C9 /* imageLeft.png in Resources */,
+				B6D0EA4F232F4DBF008C18C9 /* arrow.png in Resources */,
 				B6A9EB7823287DEF0086EEF7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,12 +970,15 @@
 				B6A9EC0923287F410086EEF7 /* NSDate+TimeCheck.m in Sources */,
 				B6A9EC5823287F4E0086EEF7 /* UIWindow+LGAlertView.m in Sources */,
 				B6D0E9532328D9C5008C18C9 /* SystemUtil.m in Sources */,
+				B6D0EA5F232F5FB3008C18C9 /* KPDropMenu.m in Sources */,
 				B6D0E9F52328EBAA008C18C9 /* LeftViewCell.m in Sources */,
 				B6A9EBF723287F410086EEF7 /* AFHTTPRequestOperation+ResponseObject.m in Sources */,
 				B6D0E9832328E939008C18C9 /* EDBaseViewController.m in Sources */,
 				B6D0E9F42328EBAA008C18C9 /* ChooseNavigationController.m in Sources */,
+				B6D0EA50232F4DBF008C18C9 /* GaiDropDownMenu.m in Sources */,
 				B6A9EC1023287F410086EEF7 /* WebUtil.m in Sources */,
 				B6A9EC4E23287F4E0086EEF7 /* LGAlertViewWindow.m in Sources */,
+				B6D0EA51232F4DBF008C18C9 /* CCDropDownMenu.m in Sources */,
 				B6D0E97D2328DC1F008C18C9 /* ConfigUtil.m in Sources */,
 				B6A9EC2823287F410086EEF7 /* EDTabstyleView.m in Sources */,
 				B6A9EC0C23287F410086EEF7 /* NSData+Base64.m in Sources */,
@@ -883,13 +987,16 @@
 				B6D0E9FA2328EBAA008C18C9 /* TableViewController.m in Sources */,
 				B6A9EBF823287F410086EEF7 /* AFImageRequestOperation.m in Sources */,
 				B6A9EBF923287F410086EEF7 /* AFPropertyListRequestOperation.m in Sources */,
+				B6D0EA4C232F4DBF008C18C9 /* ManaDropDownMenu.m in Sources */,
 				B6A9EC1923287F410086EEF7 /* NinePatchImageBlock.m in Sources */,
 				B6D0E9D52328E9BA008C18C9 /* LGSideMenuBorderView.m in Sources */,
 				B6D0E96E2328DADC008C18C9 /* OpenUDID.m in Sources */,
 				B6A9EB7523287DEF0086EEF7 /* ViewController.m in Sources */,
 				B6A9EC0D23287F410086EEF7 /* UIView+Toast.m in Sources */,
+				B6D0EA4D232F4DBF008C18C9 /* SyuDropDownMenu.m in Sources */,
 				B6A9EC2223287F410086EEF7 /* EDTextView.m in Sources */,
 				B6D0E9D02328E9BA008C18C9 /* LGSideMenuView.m in Sources */,
+				B6D0EA58232F50FB008C18C9 /* IGLDropDownMenu.m in Sources */,
 				B6A9EBFD23287F410086EEF7 /* AFURLConnectionOperation.m in Sources */,
 				B6A9EC0523287F410086EEF7 /* UIView+FirstResponder.m in Sources */,
 				B6A9EC1523287F410086EEF7 /* SBJSON.m in Sources */,
@@ -900,6 +1007,7 @@
 				B6D0EA132328ED98008C18C9 /* StartupPopupView.m in Sources */,
 				B6D0E9F62328EBAA008C18C9 /* OtherViewController.m in Sources */,
 				B6A9EC0123287F410086EEF7 /* AFXMLRequestOperation.m in Sources */,
+				B6D0EA4E232F4DBF008C18C9 /* CCDropDownMenuCell.m in Sources */,
 				B6A9EC2123287F410086EEF7 /* EDImageView.m in Sources */,
 				B6D0E9FE2328EC66008C18C9 /* MainScreenViewController.m in Sources */,
 				B6A9EBFA23287F410086EEF7 /* AFNetworkConnect.m in Sources */,
@@ -908,6 +1016,7 @@
 				B6D0E9CF2328E9BA008C18C9 /* LGSideMenuHelper.m in Sources */,
 				B6D0E9DC2328EA31008C18C9 /* KeyboardManager.m in Sources */,
 				B6D0EA2A2328F82A008C18C9 /* BuildingController.m in Sources */,
+				B6D0EA59232F50FB008C18C9 /* IGLDropDownItem.m in Sources */,
 				B6A9EC5323287F4E0086EEF7 /* LGAlertViewShadowView.m in Sources */,
 				B6D0E9D32328E9BA008C18C9 /* LGSideMenuGesturesHandler.m in Sources */,
 				B6D0E9F12328EBAA008C18C9 /* RightViewController.m in Sources */,
@@ -956,6 +1065,7 @@
 				B6A9EC2623287F410086EEF7 /* EDAlignableLabel.m in Sources */,
 				B6A9EC2323287F410086EEF7 /* EDRoundView.m in Sources */,
 				B6A9EBFB23287F410086EEF7 /* AFHTTPClient.m in Sources */,
+				B6D0EA5C232F5E4E008C18C9 /* FhcComboBoxView.m in Sources */,
 				B6A9EC4F23287F4E0086EEF7 /* LGAlertViewWindowContainer.m in Sources */,
 				B6A9EC0323287F410086EEF7 /* NSData+toString.m in Sources */,
 				B6A9EBFF23287F410086EEF7 /* AFHTTPClient+Synchronous.m in Sources */,

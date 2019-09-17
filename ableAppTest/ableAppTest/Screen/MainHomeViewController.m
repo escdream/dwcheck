@@ -32,7 +32,7 @@
     // not login info
     if (![[UserInfo instance] isUserLogin])
     {
-        [LoginViewController ShowLoginView:@"" animated:NO];
+     //   [LoginViewController ShowLoginView:@"" animated:NO];
     }
     
     

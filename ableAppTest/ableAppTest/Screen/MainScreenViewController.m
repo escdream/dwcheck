@@ -15,6 +15,7 @@
 #import "StartupPopupView.h"
 #import "NSString+Format.h"
 #import "UserInfo.h"
+#import "BuildingViewController.h"
 
 
 
@@ -67,7 +68,7 @@
     // not login info
 //    if (![[UserInfo instance] isUserLogin])
     {
-        [LoginViewController ShowLoginView:@"" animated:NO];
+       // [LoginViewController ShowLoginView:@"" animated:NO];
     }
     
     self.showMyMenu = FALSE;
@@ -84,8 +85,17 @@
 //
 //    [v addSubview:_tblInfoList];
 //
+    [self showBuilding];
 }
 
+- (void) showBuilding
+{
+    BuildingViewController * controler = [[BuildingViewController alloc] initWithNibName:@"BuildingViewController" bundle:nil];
+
+
+    [self.navigationController pushViewController:controler animated:YES];
+}
+    
 
 
 - (void) initUserData
@@ -110,119 +120,10 @@
 }
 */
 
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0)
-        return arrMakeList.count;
-    else if (section == 1)
-        return arrArtistsList.count;
-    return 0;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.font = [UIFont systemFontOfSize:12];
-    cell.textLabel.textColor = RGB(33, 33, 33);
-    cell.textLabel.text = @"text";
-    
-    if (indexPath.section == 0)
-    {
-    }
-    else if (indexPath.section == 1)
-    {
-    }
-    
-    return cell;
-}
-
-#pragma mark - UITableViewDelegate
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
-{
-    return TABLE_HEADER_HEIGHT;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return TABLE_ROW_HEIGHT;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;   // custom view for header. will be adjusted
-{
-    UIView * view = [[UIView  alloc] init];
-    
-    view.frame = CGRectMake(0, 0, tableView.frame.size.width, TABLE_HEADER_HEIGHT);
-    
-    view.backgroundColor = [UIColor whiteColor];
-    UILabel * lb = [[UILabel alloc] initWithFrame:view.bounds];
-    
-    lb.font = [[ResourceManager sharedManager] getFontBoldWithSize:18.f];
-    
-    CGRect r = lb.frame;
-    
-    r.origin.x = 10;
-    r.size.width -= 10;
-    
-    lb.frame = r;
-    lb.textColor = RGB(33, 33, 33);
-    
-    [view addSubview:lb];
-    if (section == 0)
-    {
-        lb.text = @"My Making List";
-        
-    }
-    else if (section == 1)
-    {
-        lb.text = @"My Artists List";
-        
-        UIView * line = [[UIView alloc] initWithFrame:CGRectMake(0, 0, view.frame.size.width, 1)];
-        line.backgroundColor = [UIColor grayColor];
-        [view addSubview:line];
-    }
-
-    return view;
-}
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.section == 0)
-    {
-        
-    }
-    else if (indexPath.section == 1)
-    {
-
-    }
-}
-
-- (IBAction)onLoginClcik:(id)sender {
-    [LoginViewController ShowLoginView:@"" animated:YES];
-}
-
-- (IBAction)onPlayView:(id)sender {
-     
-}
 
 - (IBAction)onSearchView:(id)sender {
-//    BannerViewController * controler = [[BannerViewController alloc] initWithNibName:@"BannerViewController" bundle:nil];
-//    UserOtherViewController * controler = [[UserOtherViewController alloc] initWithNibName:@"UserOtherViewController" bundle:nil];
-//    TagCollectonViewController * controler = [[TagCollectonViewController alloc] initWithNibName:@"TagCollectonViewController" bundle:nil];
-
-
-//    [self.navigationController pushViewController:controler animated:YES];
+    [self showBuilding];
 }
+
 
 @end

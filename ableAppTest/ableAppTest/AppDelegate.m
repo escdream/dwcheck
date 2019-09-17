@@ -31,10 +31,10 @@
     //    RootViewController *viewController;
     //    viewController = [RootViewController new];
     
-    //    MainScreenViewController * viewController =  [[MainScreenViewController alloc] initWithNibName:@"MainScreenViewController" bundle:nil];
-    BuildingViewController * viewController =  [[BuildingViewController alloc] initWithNibName:@"BuildingViewController" bundle:nil];
+    MainScreenViewController * viewController =  [[MainScreenViewController alloc] initWithNibName:@"MainScreenViewController" bundle:nil];
+    //BuildingViewController * viewController =  [[BuildingViewController alloc] initWithNibName:@"BuildingViewController" bundle:nil];
     
-    NavigationController *navigationController = [[NavigationController alloc]  initWithNavigationBarClass:[TONavigationBar class] toolbarClass:nil];
+    NavigationController *navigationController = [[NavigationController alloc] initWithNavigationBarClass:[TONavigationBar class] toolbarClass:nil];
     
     [navigationController pushViewController:viewController animated:NO];
     

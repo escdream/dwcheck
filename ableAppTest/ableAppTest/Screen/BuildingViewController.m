@@ -11,10 +11,17 @@
 #import "LoginViewController.h"
 #import "CommonUtil.h"
 #import "UserInfo.h"
+#import "CommonFileUtil.h"
+#import "ResourceManager.h"
+#import "CCDropDownMenus.h"
+#import "IGLDropDownMenu.h"
+#import "FhcComboBoxView.h"
+#import "KPDropMenu.h"
+
 
 @interface BuildingViewController ()
 {
-    UIScrollView * contentsView;
+//    UIScrollView * contentsView;
     UIPageControl * pageControl;
     int m_nCurGroupIdx;
     int currentIndex;
@@ -25,6 +32,12 @@
     BuildingController * currentView;
     BuildingController * prevView;
     BuildingController * nextView;
+    __weak IBOutlet UIScrollView *contentsView;
+    
+    
+    NSArray * arrData;
+    NSArray * arrSortedData;
+    
 }
 
 @end
@@ -39,13 +52,94 @@
      //   [LoginViewController ShowLoginView:@"" animated:NO];
     }
     
-    self.showBack = NO;
-    self.showMyMenu = YES;
-    
+
+
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
     [self initData];
+    self.showBack = YES;
+    self.showMyMenu = YES;
+    
+    [self setTitleText:@""];
+    
+    self.view.backgroundColor = [UIColor blueColor];
+    
+    ManaDropDownMenu *menu = [[ManaDropDownMenu alloc] initWithFrame:_viewWork.bounds title:@"방수공사"];
+    menu.delegate = self;
+    menu.numberOfRows = 2;
+    menu.textOfRows = @[@"방수공사", @"배선공사"];
+//    [_viewWork addSubview:menu];
+    
+    
+    NSMutableArray *dropdownItems = [[NSMutableArray alloc] init];
+    IGLDropDownItem *item = [[IGLDropDownItem alloc] init];
+    [item setIconImage:[UIImage imageNamed:@"icon.png"]];
+    [item setText:@"방수공사"];
+    [dropdownItems addObject:item];
+    item = [[IGLDropDownItem alloc] init];
+    [item setIconImage:[UIImage imageNamed:@"icon.png"]];
+    [item setText:@"배선공사"];
+    [dropdownItems addObject:item];
+
+    
+    IGLDropDownMenu *dropDownMenu = [[IGLDropDownMenu alloc] initWithFrame:_viewWork.bounds];
+//    [dropDownMenu setFrame:CGRectMake(0, 0, 200, 45)];
+    dropDownMenu.menuText = @"Choose Weather";
+    dropDownMenu.menuIconImage = [UIImage imageNamed:@"chooserIcon.png"];
+    dropDownMenu.paddingLeft = 15;  // padding left for the content of the butto
+    [_viewWork addSubview:dropDownMenu];
+
+    dropDownMenu.type = IGLDropDownMenuTypeStack;
+    dropDownMenu.gutterY = 5;
+    dropDownMenu.itemAnimationDelay = 0.1;
+    dropDownMenu.rotate = IGLDropDownMenuRotateRandom;
+    
+//    [dropDownMenu reloadView];
+    
+    
+    KPDropMenu *dropNew = [[KPDropMenu alloc] initWithFrame:_viewWork.bounds];
+    dropNew.delegate = self;
+    dropNew.items = @[@"방수공사", @"배선공사"];
+    dropNew.title = @"공사선택";
+    dropNew.itemsFont = [UIFont fontWithName:@"Helvetica-Regular" size:16.0];
+    dropNew.titleTextAlignment = NSTextAlignmentCenter;
+    dropNew.itemHeight = 60;
+    dropNew.DirectionDown = NO;
+    
+    CGRect rect = _viewWork.frame;
+    
+    
+    rect = [_viewBottom convertRect:rect toView:self.view];
+    
+    dropNew.frame = rect;
+    dropNew.tag = 101;
+    
+    [self.view addSubview:dropNew];
+    
+    
+    
+    KPDropMenu *dropDong = [[KPDropMenu alloc] initWithFrame:_viewDongSel.bounds];
+    dropDong.delegate = self;
+    
+    dropDong.items = arrSortedData;
+    dropDong.title = @"작업동선택";
+    dropDong.itemsFont = [UIFont fontWithName:@"Helvetica-Regular" size:16.0];
+    dropDong.titleTextAlignment = NSTextAlignmentCenter;
+    dropDong.itemHeight = 50;
+    dropDong.DirectionDown = NO;
+    dropDong.tag = 102;
+    
+    rect = _viewDongSel.frame;
+    
+    
+    rect = [_viewBottom convertRect:rect toView:self.view];
+    
+    dropDong.frame = rect;
+    
+    [self.view addSubview:dropDong];
+    
+    
 }
 
 /*
@@ -58,20 +152,108 @@
 }
 */
 
+-(void)didSelectItem : (KPDropMenu *) dropMenu atIndex : (int) atIntedex;
+{
+    
+    if (dropMenu.tag == 101)
+    {
+        if (atIntedex == 0)
+            _str_disp_mode = @"Work_waterproof";
+        else if (atIntedex == 1)
+            _str_disp_mode = @"Work_wiring";
+        else
+            _str_disp_mode = @"";
+        if (currentView)
+        {
+            [self updateDispMode:_str_disp_mode];
+    //        [currentView refreshData];
+        }
+    }
+    else
+    {
+        int idx = atIntedex;
+        
+        [self gotoGroupIndx:idx];
+    }
+}
+
+-(void)didShow : (KPDropMenu *)dropMenu;
+{
+}
+
+-(void)didHide : (KPDropMenu *)dropMenu;
+{
+}
 
 - (void) initData
 {
 
     
+    NSString * sPath = [NSString stringWithFormat:@"main/%@", FOLDER_RESOURCE];
+    NSString *fileName    = [CommonFileUtil getResFilePath:sPath fileName:@"apart.json"];
+    NSString *dataString= @"";
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:fileName])
+    {
+        NSData *data = [[NSFileManager defaultManager] contentsAtPath:fileName];
+        dataString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    }
+    
+    if (dataString != nil)
+    {
+        NSData *jsonData = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *e;
+        
+        
+        arrData = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+        
+        
+//        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData options:nil error:&e];
+        
+        
+        
+        NSLog(@"%@,", arrData);
+        NSLog(@"%d", arrData.count);
+    }
+    
+    
+    
+    if (arrData == nil)
+    {
+        arrData = [[NSArray alloc] init];
+    }
+    
+    
+    
+    NSMutableDictionary  * dicDong = [[NSMutableDictionary alloc] init];
+    
+    
+    
+    for (int i=0; i<arrData.count-1; i++)
+    {
+        NSMutableDictionary * dic = arrData[i];
+        
+        NSString * strDong = dic[@"Dong"];
+        
+        
+        if (strDong != nil && strDong.length > 0)
+        {
+            NSMutableArray * arrDongData = dicDong[strDong];
+            
+            if (arrDongData == nil)
+            {
+                arrDongData = [[NSMutableArray alloc] init];
+                dicDong[strDong] = arrDongData;
+            }
+            
+            [arrDongData addObject:dic];
+        }
+    }
+    
     CGRect r = [UIScreen mainScreen].bounds;//  self.view.frame;
+    r.size.height -= (_viewBottom.frame.size.height + self.navigationController.navigationBar.frame.size.height + 20);
+    contentsView.bounds = r;
     
-    r.origin.y += CALCUTIL_VERT_HEIGHT(10);
-    r.size.height -= CALCUTIL_VERT_HEIGHT(10);
-    contentsView = [[UIScrollView alloc] initWithFrame:r];
-    
-//    [self.view insertSubview:contentsView aboveSubview:self.view];
-    [self.view addSubview:contentsView];
-
     CGSize sz = contentsView.frame.size;
     sz.width = contentsView.frame.size.width * 3;
     contentsView.contentSize = sz;
@@ -95,21 +277,42 @@
 //    m_nCurGroupIdx = [CommonUtil getIntegerForKey:@"fav.group.idx" basic:0] ;
     
     
-    maxGroupCount = 10;
+    maxGroupCount = dicDong.count;
     arrBuilding = [[NSMutableArray alloc] init];
     
-    for (int i=0; i<maxGroupCount; i++)
+    
+    
+    
+    NSArray * dataArray = [dicDong allKeys];
+    
+    
+    
+    NSArray *arrSorted = [dataArray sortedArrayUsingComparator:^(NSString *a, NSString *b){
+        return [a compare:b];
+    }];
+    
+    
+    arrSortedData = arrSorted;
+    
+    for (int i=0; i<arrSorted.count; i++)
     {
         BuildingController * v = [[BuildingController alloc] initWithNibName:@"BuildingController" bundle:nil];
-        CGRect r = [UIScreen mainScreen].bounds;
+        v.arrDongInfo = dicDong[arrSorted[i]];
+        v.strDong = [arrSorted[i] copy];
+        
+        
+        CGRect r = contentsView.bounds;
+//        r.size.height -= (_viewBottom.frame.size.height + self.navigationController.navigationBar.frame.size.height + 20);;
+//        r.size.height -= _viewBottom.frame.size.height;
         r.origin.x = i * self.view.frame.size.width;
         v.view.frame = r;
         
         [contentsView addSubview:v.view];
         
         UILabel * lb = [[UILabel alloc] initWithFrame:v.view.bounds];
-        lb.text = [NSString stringWithFormat:@"%0d", i+1];
+        lb.text = [NSString stringWithFormat:@"%@", arrSorted[i]];
         lb.textAlignment = NSTextAlignmentCenter;
+        lb.font = [UIFont systemFontOfSize:50];
         
         [v.view addSubview:lb];
         
@@ -117,9 +320,38 @@
         [arrBuilding addObject:v];
     }
     
+    
+    [self gotoGroupIndx:0];
 
 }
 
+- (void) layoutSubviews
+{
+    CGRect r = [UIScreen mainScreen].bounds;//  self.view.frame;
+    r.size.height -= _viewBottom.frame.size.height ;
+    contentsView.bounds = r;
+
+    for (int i=0; i<arrBuilding.count; i++)
+    {
+        BuildingController * v = arrBuilding[i];
+        
+        CGRect r = contentsView.bounds;
+        r.origin.x = i * self.view.frame.size.width;
+        v.view.frame = r;
+    }
+}
+
+
+- (void) updateDispMode:(NSString *) sCmd
+{
+    for (int i=0; i<arrBuilding.count; i++)
+    {
+        BuildingController * v = arrBuilding[i];
+        
+        v.str_disp_mode = sCmd;
+        if (v.visible) [v refreshData];
+    }
+}
 
 #pragma UISCrollView Delegate
 
@@ -190,6 +422,18 @@
         currentView = [arrBuilding objectAtIndex:currentIndex];
         nextView  = [arrBuilding objectAtIndex:nx];
         
+        
+        [self updateDispMode:_str_disp_mode];
+        
+        if (prevView) [prevView buildData];
+        if (currentView) [currentView buildData];
+        if (nextView) [nextView buildData];
+
+        
+        [prevView.view setNeedsDisplay];
+        [currentView.view setNeedsDisplay];
+        [nextView.view setNeedsDisplay];
+
         
         CGRect r = prevView.view.frame;
         
@@ -302,6 +546,27 @@
     }
 }
 
+- (IBAction)onDongClick:(id)sender {
+    
+    [self.view bringSubviewToFront:_pickerView];
+    
+}
 
+// The number of columns of data
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;;
+}
+// The number of rows of data
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    return arrBuilding.count;
+}
+// The data to return for the row and component (column) that's being passed in
+- (NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    BuildingController * v =arrBuilding[row];
+    return v.strDong;
+}
 
 @end
