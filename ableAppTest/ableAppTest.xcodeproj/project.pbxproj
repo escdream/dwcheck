@@ -159,6 +159,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B68C0FD8233E13D500A0604C /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B6A9EB6D23287DEE0086EEF7 /* ableAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ableAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A9EB7023287DEF0086EEF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6A9EB7123287DEF0086EEF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -453,6 +454,7 @@
 		B6A9EB6F23287DEF0086EEF7 /* ableAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				B68C0FD8233E13D500A0604C /* PrefixHeader.pch */,
 				B6D0EA1F2328F500008C18C9 /* Resource */,
 				B6D0EA092328ED2D008C18C9 /* Shared */,
 				B6D0EA002328ECC6008C18C9 /* Popup */,
@@ -1232,7 +1234,7 @@
 					"$(PROJECT_DIR)/ableAppTest/Lib",
 				);
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = ableTest/PrefixHeader.pch;
 				INFOPLIST_FILE = ableAppTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1260,7 +1262,7 @@
 					"$(PROJECT_DIR)/ableAppTest/Lib",
 				);
 				GCC_ENABLE_BUILTIN_FUNCTIONS = NO;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = ableTest/PrefixHeader.pch;
 				INFOPLIST_FILE = ableAppTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
